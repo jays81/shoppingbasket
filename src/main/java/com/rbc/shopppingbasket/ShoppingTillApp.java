@@ -1,18 +1,14 @@
-package com.rbc.basket;
+package com.rbc.shopppingbasket;
 
-
-import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+public class ShoppingTillApp {
 
-public class BasketTest {
-
-    @Test
-    public void basketShouldCalculateTotalCostOfItems() {
+    public static void main(String args[]){
+        ShoppingTill shoppingTill = new ShoppingTill();
         Basket basket = new Basket();
         //add single items
         basket.addItem(Item.APPLE);
@@ -26,10 +22,14 @@ public class BasketTest {
         items.add(Item.PEACH);
         items.add(Item.PEACH);
         items.add(Item.LEMON);
+        items.add(Item.PEACH);
+        items.add(Item.PEACH);
+        items.add(Item.LEMON);
         basket.addItems(items);
 
-        BigDecimal totalCost = basket.calculateTotalCost();
-        assertEquals(4.25, totalCost);
+        BigDecimal totalCost = shoppingTill.calculateTotalCost(basket.getItems());
 
+        System.out.println("Total cost of shopping basket is: " + totalCost);
     }
+
 }
