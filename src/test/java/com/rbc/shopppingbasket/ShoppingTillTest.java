@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class ShoppingTillTest {
 
     @Test
-    public void basketShouldCalculateTotalCostOfItems() {
+    public void tillShouldCalculateTotalCostOfItems() {
         ShoppingTill shoppingTill = new ShoppingTill();
         Basket basket = new Basket();
         //add single items
